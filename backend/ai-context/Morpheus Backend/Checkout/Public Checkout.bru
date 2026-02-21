@@ -1,0 +1,16 @@
+meta {
+  name: Public Checkout
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/public/checkout/localhost/marimonteiro
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,46 @@
+meta {
+  name: Create Model
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/models
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTk5MmZmMzc4Yzc5YTZkYjEwZDBlYWQiLCJpYXQiOjE3NzE2NDY5NjMsImV4cCI6MTc3MjI1MTc2M30.8h5dFjUZ0JM2OJvJ5aOHJNDuHA95QrfK_TXXhqycaDI
+}
+
+body:json {
+  {
+    "username": "amanda",
+    "displayName": "Amanda Gold",
+    "description": "Conteúdo exclusivo",
+    "profilePhoto": "https://cdn.example.com/photo.jpg",
+    "coverPhoto": "https://cdn.example.com/cover.jpg",
+    "domains": ["localhost"],
+    "template": "dark",
+    "pricing": {
+      "weekly": {
+        "price": 1500,
+        "enabled": true
+      },
+      "monthly": {
+        "price": 5000,
+        "enabled": true
+      },
+      "annual": {
+        "price": 45000,
+        "enabled": false
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

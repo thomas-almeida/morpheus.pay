@@ -1,0 +1,16 @@
+meta {
+  name: Check Payment
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/payment/status/69994c1c6b44fb2682aa4367
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

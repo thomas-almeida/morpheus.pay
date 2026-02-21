@@ -1,0 +1,27 @@
+meta {
+  name: Generate Payment Intent
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/payment/generate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "modelId": "699932df485f08dea1a52fac",
+    "plan": "weekly",
+    "buyer": {
+      "name": "John Buyer",
+      "email": "buyer@example.com"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

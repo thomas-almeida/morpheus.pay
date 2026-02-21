@@ -1,0 +1,27 @@
+meta {
+  name: Transactions
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url}}/kpi/transactions?status=paid&modelId=699932df485f08dea1a52fac&from&to
+  body: none
+  auth: inherit
+}
+
+params:query {
+  status: paid
+  modelId: 699932df485f08dea1a52fac
+  from: 
+  to: 
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTk5MmZmMzc4Yzc5YTZkYjEwZDBlYWQiLCJpYXQiOjE3NzE2NDY5NjMsImV4cCI6MTc3MjI1MTc2M30.8h5dFjUZ0JM2OJvJ5aOHJNDuHA95QrfK_TXXhqycaDI
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

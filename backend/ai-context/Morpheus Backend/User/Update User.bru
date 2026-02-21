@@ -1,0 +1,31 @@
+meta {
+  name: Update User
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{url}}/user/me
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTk5MmZmMzc4Yzc5YTZkYjEwZDBlYWQiLCJpYXQiOjE3NzE2NDY5NjMsImV4cCI6MTc3MjI1MTc2M30.8h5dFjUZ0JM2OJvJ5aOHJNDuHA95QrfK_TXXhqycaDI
+}
+
+body:json {
+  {
+    "whatsapp": "11949098312",
+    "pixKey": "11949098312"
+  }
+}
+
+vars:pre-request {
+  localhost: http://localhost:3001/api/v1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Update Click Rate
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url}}/models/699932df485f08dea1a52fac/click
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  id: 699932df485f08dea1a52fac
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
